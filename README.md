@@ -77,6 +77,9 @@ install_or_upgrade "jq"
 install_or_upgrade "openssl"
 ```
 
+## Install GPG and GNUPG
+``` brew install gnupg gnupg2```
+
 ----------
 ## Install RVM to manage our Rubies:
 
