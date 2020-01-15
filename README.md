@@ -1,14 +1,11 @@
 # setup-for-full-stack-developer
 # Setup instructions
 
-The following instructions will help you to get ready for [Le Wagon](http://www.lewagon.org) fullstack bootcamp:
-
 - Grab a text editor, where you'll spend your day and nights
 - Install a package manager
 - Pimp your Terminal
 - Setup git and GitHub
 - Install Ruby
-
 
 ## Command Line Tools
 
@@ -80,6 +77,53 @@ install_or_upgrade "jq"
 install_or_upgrade "openssl"
 ```
 
+----------
+## Install RVM to manage our Rubies:
+
+    gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+    curl -sSL https://get.rvm.io | bash -s stable
+    
+    or if you want include with stable ruby try this one, and u can skip for Install ruby version section
+    \curl -sSL https://get.rvm.io | bash -s stable --ruby
+
+
+----------
+### inisialisasi rvm 
+
+    source ~/.rvm/scripts/rvm
+    rvm requirements
+
+### Check if RVM was installed
+
+    rvm -v
+    rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+    
+
+### Install ruby version
+
+    rvm install 2.4.1 
+    rvm use 2.4.1 --default
+
+### cek if ruby was installed
+
+    ruby -v
+    ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin17]
+    
+### Installing Rails and Bundler
+
+    gem install rails -V --no-ri --no-rdoc
+    gem install bundler -V --no-ri --no-rdoc
+
+### Setting up SSH Keys
+
+    ssh -T git@github.com
+    Permission denied (publickey)
+### setting SSH 
+
+    ssh-keygen -t rsa
+    cat ~/.ssh/id_rsa.pub
+Copy and add to github account
 
 ## Sublime Text 3 - Your text editor
 
@@ -347,7 +391,5 @@ Go to  > System Preferences > Keyboard. Click on the third tab (Shortcuts). A
 pane, click the radio button `All controls`. This way when you get a dialog with several options,
 you'll be able to type `Enter` to confirm, or `Space` to choose the cancel option. If you have more than
 two options, you can use tab to circle between them.
-
-
 
 
